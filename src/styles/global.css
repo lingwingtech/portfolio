@@ -989,3 +989,18 @@ body { background: var(--bg); color: var(--ink); }
   .case-study-swatch { width: 20px; height: 20px; }
   .case-study-outcomes { padding-bottom: 86px; }
 }
+
+
+/* React Bits SwarmCursor: subtle, full-bleed interaction in the homepage hero. */
+.hero-swarm-cursor {
+  position: absolute !important;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.hero-swarm-cursor .swarm-cursor-canvas {
+  opacity: .78;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-swarm-cursor { display: none; }
+}
