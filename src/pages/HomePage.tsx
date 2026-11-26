@@ -1,6 +1,7 @@
 import { useEffect, useState, type CSSProperties } from 'react'
 import { Link } from 'react-router-dom'
 import { Container } from '../components/Container'
+import SwarmCursor from '../components/SwarmCursor/SwarmCursor'
 import { projects, site } from '../data/site'
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
 
@@ -41,6 +42,15 @@ export function HomePage() {
   return (
     <>
       <section className="hero hero-home reference-hero">
+        <SwarmCursor
+          className="hero-swarm-cursor"
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', zIndex: 0 }}
+          count={800}
+          size={2.6}
+          spread={90}
+          swirl={0.6}
+          clickEffect="burst"
+        />
         <Container>
           <div className="hero-reference-topline">
             <p className="hero-eyebrow"><span className="hero-accent-dot" aria-hidden="true" />LING YI — SENIOR UI/UX DESIGNER</p>
